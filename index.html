@@ -1,7 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Sarcos - Economista y Científico de Datos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, footer {
+            background-color: #4a90e2;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        h1, h2 {
+            font-family: 'Georgia', serif;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+        }
+        p, li {
+            color: #555;
+        }
+        /* Secciones */
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        section {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        /* Lista de proyectos */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 0.5rem 0;
+        }
+        ul li a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Pie de página */
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -9,21 +71,23 @@
         <p>Economista | Estadístico | Científico de Datos</p>
     </header>
 
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico.</p>
-    </section>
+    <div class="container">
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico.</p>
+        </section>
 
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <ul>
-            <li><a href="link_proyecto_1">Optimización de Portafolios con Machine Learning</a></li>
-            <li><a href="link_proyecto_2">Análisis de Impacto de Políticas Públicas</a></li>
-        </ul>
-    </section>
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <ul>
+                <li><a href="link_proyecto_1">Optimización de Portafolios con Machine Learning</a></li>
+                <li><a href="link_proyecto_2">Análisis de Impacto de Políticas Públicas</a></li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
-        <p>Contacto: jorge@example.com</p>
+        <p>Contacto: <a href="mailto:jorge@example.com" style="color: #ffffff; text-decoration: none;">jorge@example.com</a></p>
     </footer>
 </body>
 </html>
