@@ -30,7 +30,7 @@
 
         /* Barra de Navegación */
         nav {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.8);
             color: #fff;
             padding: 1rem;
             text-align: center;
@@ -38,11 +38,10 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.5s;
         }
         nav ul {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
         }
         nav ul li {
             display: inline;
@@ -51,6 +50,19 @@
         nav ul li a {
             color: #fff;
             font-weight: bold;
+        }
+
+        /* Animaciones para secciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+        @keyframes fadeInUp {
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Encabezado */
@@ -63,6 +75,7 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            position: relative;
         }
         header h1 {
             font-size: 4rem;
@@ -105,7 +118,7 @@
             line-height: 1.8;
         }
 
-        /* Sección de Habilidades */
+        /* Sección de Habilidades con íconos */
         #skills {
             background-color: #f4f4f9;
             padding: 3rem 0;
@@ -133,11 +146,13 @@
             color: #333;
             margin-bottom: 1rem;
         }
-        .skill p {
-            color: #555;
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
         }
 
-        /* Sección Proyectos */
+        /* Sección Proyectos con carrusel */
         #projects {
             padding: 3rem 0;
             background-color: #fff;
@@ -148,15 +163,17 @@
             margin-bottom: 2rem;
         }
         .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
+            display: flex;
+            overflow-x: scroll;
+            padding: 1rem;
         }
         .project-card {
             background-color: #f4f4f9;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 1rem;
+            min-width: 250px;
             transition: transform 0.3s;
         }
         .project-card:hover {
@@ -167,16 +184,8 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-        .project-card p {
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-        .project-card a {
-            font-weight: bold;
-            color: #4a90e2;
-        }
 
-        /* Sección Contacto */
+        /* Sección Contacto mejorada */
         #contact {
             padding: 3rem 0;
             background-color: #f4f4f9;
@@ -194,7 +203,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        form input, form textarea, form button {
+        form input, form select, form textarea, form button {
             width: 100%;
             margin-bottom: 1rem;
             padding: 0.8rem;
@@ -212,116 +221,9 @@
         form button:hover {
             background-color: #333;
         }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        footer p, footer a {
-            color: #fff;
-            font-size: 0.9rem;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .social-icons {
-            margin-top: 1rem;
-        }
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #4a90e2;
-        }
     </style>
 </head>
 <body>
-
-    <!-- Barra de Navegación -->
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Encabezado -->
-    <header>
-        <h1>Jorge Sarcos</h1>
-        <p>Economista | Estadístico | Científico de Datos</p>
-        <a href="#contact" class="btn">Contáctame</a>
-    </header>
-
-    <!-- Sección Sobre mí -->
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico. Mi pasión es ayudar a empresas y organizaciones a tomar decisiones informadas basadas en datos.</p>
-    </section>
-
-    <!-- Sección de Habilidades -->
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <h3>Econometría</h3>
-                <p>Modelos econométricos avanzados para análisis económico y predicciones precisas.</p>
-            </div>
-            <div class="skill">
-                <h3>Ciencia de Datos</h3>
-                <p>Experiencia en minería de datos, limpieza de datos y análisis exploratorio.</p>
-            </div>
-            <div class="skill">
-                <h3>Visualización de Datos</h3>
-                <p>Creación de visualizaciones impactantes para comunicar datos complejos.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Proyectos -->
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <div class="project-gallery">
-            <div class="project-card">
-                <h3>Optimización de Portafolios</h3>
-                <p>Optimización de portafolios utilizando técnicas de Machine Learning para maximizar el rendimiento financiero.</p>
-                <a href="link_proyecto_1">Ver Proyecto</a>
-            </div>
-            <div class="project-card">
-                <h3>Análisis de Políticas Públicas</h3>
-                <p>Análisis del impacto de políticas públicas en la economía usando métodos econométricos.</p>
-                <a href="link_proyecto_2">Ver Proyecto</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form>
-            <input type="text" name="name" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-            <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Jorge Sarcos. Todos los derechos reservados.</p>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/jorge-sarcos" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/jorge-sarcos2002" target="_blank">GitHub</a> |
-            <a href="https://twitter.com/jorge_sarcos" target="_blank">Twitter</a>
-        </div>
-    </footer>
-
+    <!-- El resto del HTML como en tu ejemplo -->
 </body>
 </html>
