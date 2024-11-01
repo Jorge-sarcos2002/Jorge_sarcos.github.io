@@ -65,7 +65,7 @@
             }
         }
 
-        /* Encabezado */
+        /* Encabezado con efecto parallax */
         header {
             background: url('https://source.unsplash.com/1600x900/?economy,technology') no-repeat center center/cover;
             color: #fff;
@@ -224,6 +224,95 @@
     </style>
 </head>
 <body>
-    <!-- El resto del HTML como en tu ejemplo -->
+
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Jorge Sarcos</h1>
+        <p>Economista | Estadístico | Científico de Datos</p>
+        <a href="#contact" class="btn">Contáctame</a>
+    </header>
+
+    <!-- Sección Sobre mí -->
+    <section id="about" class="fade-in">
+        <h2>Sobre mí</h2>
+        <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico. Mi pasión es ayudar a empresas y organizaciones a tomar decisiones informadas basadas en datos.</p>
+    </section>
+
+    <!-- Sección de Habilidades -->
+    <section id="skills" class="fade-in">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://image.flaticon.com/icons/svg/888/888857.svg" alt="Econometría">
+                <h3>Econometría</h3>
+                <p>Modelos econométricos avanzados para análisis económico y predicciones precisas.</p>
+            </div>
+            <div class="skill">
+                <img src="https://image.flaticon.com/icons/svg/1038/1038492.svg" alt="Ciencia de Datos">
+                <h3>Ciencia de Datos</h3>
+                <p>Experiencia en minería de datos, limpieza de datos y análisis exploratorio.</p>
+            </div>
+            <div class="skill">
+                <img src="https://image.flaticon.com/icons/svg/2965/2965276.svg" alt="Visualización de Datos">
+                <h3>Visualización de Datos</h3>
+                <p>Creación de visualizaciones impactantes para comunicar datos complejos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="fade-in">
+        <h2>Proyectos</h2>
+        <div class="project-gallery">
+            <div class="project-card">
+                <h3>Optimización de Portafolios</h3>
+                <p>Optimización de portafolios utilizando técnicas de Machine Learning para maximizar el rendimiento financiero.</p>
+                <a href="link_proyecto_1">Ver Proyecto</a>
+            </div>
+            <div class="project-card">
+                <h3>Análisis de Políticas Públicas</h3>
+                <p>Análisis del impacto de políticas públicas en la economía usando métodos econométricos.</p>
+                <a href="link_proyecto_2">Ver Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="fade-in">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+            <select name="topic" required>
+                <option value="" disabled selected>Selecciona un tema</option>
+                <option value="proyecto">Consulta de Proyecto</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="otros">Otros</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jorge Sarcos. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/jorge-sarcos" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/jorge-sarcos2002" target="_blank">GitHub</a> |
+            <a href="https://twitter.com/jorge_sarcos" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
 </body>
 </html>
