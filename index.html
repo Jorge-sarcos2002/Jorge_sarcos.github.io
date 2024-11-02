@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Sarcos - Economista y Científico de Datos</title>
+    <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos -->
     <style>
         /* Estilos Generales */
         * {
@@ -15,30 +19,29 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #ffffff;
+            color: #222222;
             line-height: 1.6;
         }
         a {
-            color: #4a90e2;
+            color: #1a73e8;
             text-decoration: none;
             transition: color 0.3s;
         }
         a:hover {
-            color: #333;
+            color: #0d47a1;
         }
 
         /* Barra de Navegación */
         nav {
-            background-color: rgba(51, 51, 51, 0.8);
-            color: #fff;
+            background-color: #0d47a1;
+            color: #ffffff;
             padding: 1rem;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.5s;
         }
         nav ul {
             list-style-type: none;
@@ -48,39 +51,25 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
         }
 
-        /* Animaciones para secciones */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s forwards;
-        }
-        @keyframes fadeInUp {
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Encabezado con efecto parallax */
+        /* Encabezado */
         header {
-            background: url('https://source.unsplash.com/1600x900/?economy,technology') no-repeat center center/cover;
-            color: #fff;
+            background: linear-gradient(to bottom, #1a73e8, #0d47a1);
+            color: #ffffff;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            position: relative;
+            padding-top: 60px; /* Para compensar la barra de navegación fija */
         }
         header h1 {
             font-size: 4rem;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
         header p {
             font-size: 1.5rem;
@@ -90,26 +79,27 @@
         header .btn {
             margin-top: 20px;
             padding: 10px 30px;
-            background-color: #4a90e2;
-            color: #fff;
+            background-color: #ffffff;
+            color: #0d47a1;
             border: none;
             border-radius: 5px;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
         header .btn:hover {
-            background-color: #333;
+            background-color: #0d47a1;
+            color: #ffffff;
         }
 
         /* Sección Sobre Mí */
         #about {
             padding: 3rem 0;
-            background-color: #fff;
+            background-color: #f9f9f9;
             text-align: center;
         }
         #about h2 {
-            color: #4a90e2;
+            color: #0d47a1;
             margin-bottom: 1rem;
         }
         #about p {
@@ -118,97 +108,165 @@
             line-height: 1.8;
         }
 
-        <!-- Sección de Habilidades con íconos de Font Awesome -->
-<section id="skills" class="fade-in">
-    <h2>Habilidades</h2>
-    <div class="skills-container">
-        <div class="skill">
-            <i class="fas fa-chart-line" style="font-size: 50px; color: #4a90e2;"></i>
-            <h3>Econometría</h3>
-            <p>Modelos econométricos avanzados para análisis económico y predicciones precisas.</p>
-        </div>
-        <div class="skill">
-            <i class="fas fa-database" style="font-size: 50px; color: #4a90e2;"></i>
-            <h3>Ciencia de Datos</h3>
-            <p>Experiencia en minería de datos, limpieza de datos y análisis exploratorio.</p>
-        </div>
-        <div class="skill">
-            <i class="fas fa-chart-bar" style="font-size: 50px; color: #4a90e2;"></i>
-            <h3>Visualización de Datos</h3>
-            <p>Creación de visualizaciones impactantes para comunicar datos complejos.</p>
-        </div>
-    </div>
-</section>
+        /* Sección Habilidades */
+        #skills {
+            padding: 3rem 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        #skills h2 {
+            color: #0d47a1;
+            margin-bottom: 1rem;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            flex: 1 1 250px;
+            margin: 1rem;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .skill:hover {
+            transform: scale(1.05);
+        }
+        .skill i {
+            font-size: 50px;
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+        .skill h3 {
+            color: #222222;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .skill p {
+            color: #555555;
+            line-height: 1.6;
+        }
 
-
-        /* Sección Proyectos con carrusel */
+        /* Sección Proyectos */
         #projects {
             padding: 3rem 0;
-            background-color: #fff;
+            background-color: #f9f9f9;
             text-align: center;
         }
         #projects h2 {
-            color: #4a90e2;
-            margin-bottom: 2rem;
+            color: #0d47a1;
+            margin-bottom: 1rem;
         }
         .project-gallery {
             display: flex;
-            overflow-x: scroll;
-            padding: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .project-card {
-            background-color: #f4f4f9;
+            flex: 1 1 300px;
+            margin: 1rem;
             padding: 1.5rem;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 1rem;
-            min-width: 250px;
             transition: transform 0.3s;
         }
         .project-card:hover {
             transform: scale(1.05);
         }
         .project-card h3 {
-            color: #333;
+            color: #222222;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
+        .project-card p {
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .project-card a {
+            color: #1a73e8;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
 
-        /* Sección Contacto mejorada */
+        /* Sección Contacto */
         #contact {
             padding: 3rem 0;
-            background-color: #f4f4f9;
+            background-color: #ffffff;
             text-align: center;
         }
         #contact h2 {
-            color: #4a90e2;
+            color: #0d47a1;
             margin-bottom: 1rem;
         }
         form {
             max-width: 600px;
             margin: auto;
-            background-color: #fff;
+            background-color: #f9f9f9;
             padding: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
         form input, form select, form textarea, form button {
             width: 100%;
             margin-bottom: 1rem;
             padding: 0.8rem;
-            border: 1px solid #ccc;
+            border: 1px solid #cccccc;
             border-radius: 5px;
             font-size: 1rem;
         }
         form button {
-            background-color: #4a90e2;
-            color: #fff;
+            background-color: #1a73e8;
+            color: #ffffff;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         form button:hover {
-            background-color: #333;
+            background-color: #0d47a1;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #0d47a1;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        footer .social-icons a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #cccccc;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .skills-container, .project-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            nav {
+                padding: 0.5rem;
+            }
+            header h1 {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
@@ -232,52 +290,55 @@
     </header>
 
     <!-- Sección Sobre mí -->
-    <section id="about" class="fade-in">
+    <section id="about">
         <h2>Sobre mí</h2>
         <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico. Mi pasión es ayudar a empresas y organizaciones a tomar decisiones informadas basadas en datos.</p>
+        <p>También escribo sobre análisis económicos del desarrollo en mi blog. Puedes leer mis artículos <a href="https://jorgesarcosgon.mystrikingly.com/" target="_blank">aquí</a>.</p>
     </section>
 
-    <!-- Sección de Habilidades -->
-    <section id="skills" class="fade-in">
+    <!-- Sección Habilidades -->
+    <section id="skills">
         <h2>Habilidades</h2>
         <div class="skills-container">
             <div class="skill">
-                <img src="https://image.flaticon.com/icons/svg/888/888857.svg" alt="Econometría">
+                <i class="fas fa-chart-line"></i>
                 <h3>Econometría</h3>
                 <p>Modelos econométricos avanzados para análisis económico y predicciones precisas.</p>
             </div>
             <div class="skill">
-                <img src="https://image.flaticon.com/icons/svg/1038/1038492.svg" alt="Ciencia de Datos">
+                <i class="fas fa-database"></i>
                 <h3>Ciencia de Datos</h3>
                 <p>Experiencia en minería de datos, limpieza de datos y análisis exploratorio.</p>
             </div>
             <div class="skill">
-                <img src="https://image.flaticon.com/icons/svg/2965/2965276.svg" alt="Visualización de Datos">
+                <i class="fas fa-chart-bar"></i>
                 <h3>Visualización de Datos</h3>
                 <p>Creación de visualizaciones impactantes para comunicar datos complejos.</p>
             </div>
+            <!-- Puedes añadir más habilidades si lo deseas -->
         </div>
     </section>
 
     <!-- Sección Proyectos -->
-    <section id="projects" class="fade-in">
+    <section id="projects">
         <h2>Proyectos</h2>
         <div class="project-gallery">
             <div class="project-card">
                 <h3>Optimización de Portafolios</h3>
                 <p>Optimización de portafolios utilizando técnicas de Machine Learning para maximizar el rendimiento financiero.</p>
-                <a href="link_proyecto_1">Ver Proyecto</a>
+                <a href="#" target="_blank">Ver Proyecto</a>
             </div>
             <div class="project-card">
                 <h3>Análisis de Políticas Públicas</h3>
                 <p>Análisis del impacto de políticas públicas en la economía usando métodos econométricos.</p>
-                <a href="link_proyecto_2">Ver Proyecto</a>
+                <a href="#" target="_blank">Ver Proyecto</a>
             </div>
+            <!-- Añade más proyectos según necesites -->
         </div>
     </section>
 
     <!-- Sección Contacto -->
-    <section id="contact" class="fade-in">
+    <section id="contact">
         <h2>Contacto</h2>
         <form>
             <input type="text" name="name" placeholder="Tu Nombre" required>
@@ -293,13 +354,13 @@
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer>
         <p>&copy; 2024 Jorge Sarcos. Todos los derechos reservados.</p>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/jorge-sarcos2002" target="_blank">GitHub</a> |
-            <a href="https://twitter.com/jorge_sarcos" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/jorge-sarcos2002" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/jorge_sarcos" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 
