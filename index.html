@@ -2,15 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Tu Nombre | Economista & Científico de Datos</title>
+  <title>Jorge Sarcos | Economista & Científico de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fuentes de Google (Ejemplo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Iconos (Font Awesome, opcional) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /*================== RESET BÁSICO ==================*/
     * {
       margin: 0;
       padding: 0;
@@ -30,8 +27,6 @@
     a:hover {
       color: #063176;
     }
-
-    /*================== NAVEGACIÓN ==================*/
     nav {
       background-color: #0d47a1;
       padding: 1rem;
@@ -39,7 +34,7 @@
       position: fixed;
       width: 100%;
       top: 0;
-      z-index: 999; /* Para que esté por encima de todo */
+      z-index: 999;
     }
     nav ul {
       list-style: none;
@@ -55,8 +50,6 @@
       font-weight: 600;
       transition: color 0.3s;
     }
-
-    /*================== ENCABEZADO ==================*/
     header {
       background: linear-gradient(to bottom, #1a73e8, #0d47a1);
       height: 100vh;
@@ -64,7 +57,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 60px; /* espacio para la barra fija */
+      padding-top: 60px;
       color: #ffffff;
       text-align: center;
     }
@@ -91,8 +84,6 @@
       background-color: #0d47a1;
       color: #ffffff;
     }
-
-    /*================== SECCIONES GENERALES ==================*/
     section {
       padding: 4rem 1rem;
       max-width: 1200px;
@@ -109,119 +100,6 @@
       margin: 1rem auto;
       text-align: center;
     }
-
-    /* Ejemplo para subdividir contenido dentro de cada sección */
-    .section-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .section-box {
-      flex: 1 1 300px;
-      margin: 1rem;
-      background-color: #f5f5f5;
-      padding: 1.5rem;
-      border-radius: 5px;
-      text-align: left;
-    }
-    .section-box h3 {
-      color: #333;
-      margin-bottom: 1rem;
-    }
-    .section-box p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /*================== SERVICIOS ==================*/
-    .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .service-item {
-      flex: 1 1 250px;
-      margin: 1rem;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 1.5rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .service-item:hover {
-      transform: scale(1.05);
-    }
-    .service-item h3 {
-      margin-bottom: 1rem;
-    }
-
-    /*================== PROYECTOS ==================*/
-    .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .project-card {
-      flex: 1 1 300px;
-      margin: 1rem;
-      background-color: #fdfdfd;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: scale(1.02);
-    }
-    .project-card h3 {
-      margin-bottom: 0.5rem;
-    }
-    .project-card a {
-      color: #0d47a1;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
-    }
-
-    /*================== CONTACTO ==================*/
-    form {
-      max-width: 600px;
-      margin: 2rem auto;
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 5px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
-    form input, form textarea, form select, form button {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background-color: #0d47a1;
-      color: #ffffff;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s;
-    }
-    form button:hover {
-      background-color: #063176;
-    }
-
-    /*================== FOOTER ==================*/
-    footer {
-      background-color: #0d47a1;
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem 0;
-    }
     .social-icons a {
       color: #ffffff;
       margin: 0 10px;
@@ -230,31 +108,10 @@
     .social-icons a:hover {
       color: #cccccc;
     }
-
-    /*================== RESPONSIVE ==================*/
-    @media (max-width: 768px) {
-      .section-content,
-      .services-container,
-      .projects-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-      header h1 {
-        font-size: 2.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
-
   </style>
 </head>
 <body>
 
-<!-- Navegación -->
 <nav>
   <ul>
     <li><a href="#economista">Economista</a></li>
@@ -266,127 +123,29 @@
   </ul>
 </nav>
 
-<!-- Encabezado -->
 <header>
-  <h1>Tu Nombre</h1>
+  <h1>Jorge Sarcos</h1>
   <p>Economista | Científico de Datos | Especialista Financiero</p>
   <a href="#contacto" class="btn">Contáctame</a>
 </header>
 
-<!-- Sección: Economista -->
-<section id="economista">
-  <h2>Economista</h2>
-  <p>Breve introducción sobre tu experiencia como economista, áreas de especialización, tipo de proyectos en los que has trabajado, logros, etc.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Experiencia Laboral</h3>
-      <p>Ejemplo: He colaborado con organismos internacionales y entidades gubernamentales para el diseño de políticas económicas que mejoran la competitividad de mercados locales.</p>
-    </div>
-    <div class="section-box">
-      <h3>Logros Destacados</h3>
-      <p>Ejemplo: Implementé un modelo de evaluación de riesgos macroeconómicos que permitió la optimización de recursos en un 20%.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sección: Científico de Datos -->
-<section id="cientifico">
-  <h2>Científico de Datos</h2>
-  <p>Aquí hablas de tus habilidades en análisis de datos, machine learning, big data, etc. Menciona las herramientas que dominas (Python, R, SQL...) y la relevancia de tus análisis.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Proyectos de Machine Learning</h3>
-      <p>Ejemplo: Modelos predictivos de series temporales para estimar tendencias de consumo en el sector retail.</p>
-    </div>
-    <div class="section-box">
-      <h3>Análisis Estadístico Avanzado</h3>
-      <p>Ejemplo: Implementación de panel data y técnicas de econometría para la predicción y evaluación de políticas sociales.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sección: Financiero -->
-<section id="financiero">
-  <h2>Finanzas</h2>
-  <p>Explica tu experiencia en el sector financiero: mercados bursátiles, trading, modelado de portafolios, etc.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Optimización de Portafolios</h3>
-      <p>Ejemplo: Uso de modelos de optimización moderna como Markowitz, CAPM, y técnicas de machine learning para equilibrar riesgos y retornos.</p>
-    </div>
-    <div class="section-box">
-      <h3>Análisis de Mercados Emergentes</h3>
-      <p>Ejemplo: Investigaciones enfocadas en índices latinoamericanos, correlaciones con variables macro y estrategias de inversión.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Sección: Servicios -->
-<section id="servicios">
-  <h2>Servicios</h2>
-  <p>Describe brevemente los servicios que ofreces para empresas o clientes.</p>
-  <div class="services-container">
-    <div class="service-item">
-      <h3>Consultoría Económica</h3>
-      <p>Asesoría integral en macroeconomía y políticas económicas para instituciones públicas y privadas.</p>
-    </div>
-    <div class="service-item">
-      <h3>Análisis de Datos</h3>
-      <p>Desarrollo de modelos predictivos, minería de datos y visualizaciones avanzadas para la toma de decisiones.</p>
-    </div>
-    <div class="service-item">
-      <h3>Gestión Financiera</h3>
-      <p>Diseño de estrategias de inversión, evaluación de riesgos y optimización de portafolios.</p>
-    </div>
-    <!-- Agrega más servicios si lo necesitas -->
-  </div>
-</section>
-
-<!-- Sección: Proyectos -->
-<section id="proyectos">
-  <h2>Proyectos Destacados</h2>
-  <p>Breve introducción sobre los tipos de proyectos que has realizado. Cada “Project Card” puede enlazar a más detalles o a un repositorio en GitHub.</p>
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>Modelado Macroeconómico</h3>
-      <p>Aplicación de técnicas de econometría avanzada para la predicción de variables macroeconómicas.</p>
-      <a href="#">Ver Detalles</a>
-    </div>
-    <div class="project-card">
-      <h3>Análisis de Índices Latinoamericanos</h3>
-      <p>Análisis de series temporales y optimización de portafolios en mercados bursátiles de LATAM.</p>
-      <a href="#">Ver Detalles</a>
-    </div>
-    <!-- Agrega más proyectos si lo deseas -->
-  </div>
-</section>
-
-<!-- Sección: Contacto -->
 <section id="contacto">
   <h2>Contacto</h2>
   <p>Puedes enviarme un mensaje con tus dudas o para solicitar mis servicios.</p>
   <form>
     <input type="text" name="nombre" placeholder="Tu Nombre" required>
     <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-    <select name="tema" required>
-      <option value="" disabled selected>Motivo del Contacto</option>
-      <option value="economia">Asesoría Económica</option>
-      <option value="datos">Proyecto de Datos</option>
-      <option value="finanzas">Servicios Financieros</option>
-      <option value="otros">Otros</option>
-    </select>
     <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
     <button type="submit">Enviar Mensaje</button>
   </form>
 </section>
 
-<!-- Pie de página -->
 <footer>
-  <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+  <p>&copy; 2025 Jorge Sarcos. Todos los derechos reservados.</p>
   <div class="social-icons">
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/jorge-sarcos2002" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/jorge_sarcos" target="_blank"><i class="fab fa-twitter"></i></a>
   </div>
 </footer>
 
