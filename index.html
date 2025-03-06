@@ -1,433 +1,394 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Sarcos - Economista y Científico de Datos</title>
-    <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Estilos -->
-    <style>
-        /* Estilos Generales */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            color: #222222;
-            line-height: 1.6;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        a:hover {
-            color: #0d47a1;
-        }
+  <meta charset="UTF-8">
+  <title>Tu Nombre | Economista & Científico de Datos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuentes de Google (Ejemplo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Iconos (Font Awesome, opcional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /*================== RESET BÁSICO ==================*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #0d47a1;
+    }
+    a:hover {
+      color: #063176;
+    }
 
-        /* Barra de Navegación */
-        nav {
-            background-color: #0d47a1;
-            color: #ffffff;
-            padding: 1rem;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav ul {
-            list-style-type: none;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            font-weight: bold;
-        }
+    /*================== NAVEGACIÓN ==================*/
+    nav {
+      background-color: #0d47a1;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999; /* Para que esté por encima de todo */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #ffffff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-        /* Encabezado */
-        header {
-            background: linear-gradient(to bottom, #1a73e8, #0d47a1);
-            color: #ffffff;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            padding-top: 60px; /* Para compensar la barra de navegación fija */
-        }
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-            max-width: 600px;
-        }
-        header .btn {
-            margin-top: 20px;
-            padding: 10px 30px;
-            background-color: #ffffff;
-            color: #0d47a1;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        header .btn:hover {
-            background-color: #0d47a1;
-            color: #ffffff;
-        }
+    /*================== ENCABEZADO ==================*/
+    header {
+      background: linear-gradient(to bottom, #1a73e8, #0d47a1);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px; /* espacio para la barra fija */
+      color: #ffffff;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+    header .btn {
+      background-color: #ffffff;
+      color: #0d47a1;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    header .btn:hover {
+      background-color: #0d47a1;
+      color: #ffffff;
+    }
 
-        /* Sección Sobre Mí */
-        #about {
-            padding: 3rem 0;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        #about h2 {
-            color: #0d47a1;
-            margin-bottom: 1rem;
-        }
-        #about p {
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.8;
-        }
+    /*================== SECCIONES GENERALES ==================*/
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    section h2 {
+      color: #0d47a1;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    section p {
+      max-width: 800px;
+      margin: 1rem auto;
+      text-align: center;
+    }
 
-        /* Sección Habilidades */
-        #skills {
-            padding: 3rem 0;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        #skills h2 {
-            color: #0d47a1;
-            margin-bottom: 1rem;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .skill {
-            flex: 1 1 250px;
-            margin: 1rem;
-            padding: 1.5rem;
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        .skill:hover {
-            transform: scale(1.05);
-        }
-        .skill i {
-            font-size: 50px;
-            color: #1a73e8;
-            margin-bottom: 1rem;
-        }
-        .skill h3 {
-            color: #222222;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .skill p {
-            color: #555555;
-            line-height: 1.6;
-        }
+    /* Ejemplo para subdividir contenido dentro de cada sección */
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .section-box {
+      flex: 1 1 300px;
+      margin: 1rem;
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 5px;
+      text-align: left;
+    }
+    .section-box h3 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .section-box p {
+      color: #555;
+      line-height: 1.6;
+    }
 
-        /* Sección Proyectos */
-        #projects {
-            padding: 3rem 0;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        #projects h2 {
-            color: #0d47a1;
-            margin-bottom: 1rem;
-        }
-        .project-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .project-card {
-            flex: 1 1 300px;
-            margin: 1rem;
-            padding: 1.5rem;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-        }
-        .project-card h3 {
-            color: #222222;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .project-card p {
-            color: #555555;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        .project-card a {
-            color: #1a73e8;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .project-card a:hover {
-            text-decoration: underline;
-        }
+    /*================== SERVICIOS ==================*/
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-item {
+      flex: 1 1 250px;
+      margin: 1rem;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+    .service-item h3 {
+      margin-bottom: 1rem;
+    }
 
-        /* Sección de Detalles de Proyectos */
-        #project-details {
-            padding: 3rem 0;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        #project-details div {
-            margin-bottom: 3rem;
-        }
-        #project-details h2 {
-            color: #0d47a1;
-            margin-bottom: 1rem;
-        }
-        #project-details p {
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        #project-details a {
-            color: #1a73e8;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        #project-details a:hover {
-            text-decoration: underline;
-        }
+    /*================== PROYECTOS ==================*/
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project-card {
+      flex: 1 1 300px;
+      margin: 1rem;
+      background-color: #fdfdfd;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project-card a {
+      color: #0d47a1;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+    }
 
-        /* Sección Contacto */
-        #contact {
-            padding: 3rem 0;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        #contact h2 {
-            color: #0d47a1;
-            margin-bottom: 1rem;
-        }
-        form {
-            max-width: 600px;
-            margin: auto;
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        form input, form select, form textarea, form button {
-            width: 100%;
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            border: 1px solid #cccccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        form button {
-            background-color: #1a73e8;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        form button:hover {
-            background-color: #0d47a1;
-        }
+    /*================== CONTACTO ==================*/
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    form input, form textarea, form select, form button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #0d47a1;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #063176;
+    }
 
-        /* Pie de página */
-        footer {
-            background-color: #0d47a1;
-            color: #ffffff;
-            padding: 1rem;
-            text-align: center;
-        }
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-        footer .social-icons a {
-            color: #ffffff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-        footer .social-icons a:hover {
-            color: #cccccc;
-        }
+    /*================== FOOTER ==================*/
+    footer {
+      background-color: #0d47a1;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .social-icons a {
+      color: #ffffff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+    }
+    .social-icons a:hover {
+      color: #cccccc;
+    }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .skills-container, .project-gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-            nav {
-                padding: 0.5rem;
-            }
-            header h1 {
-                font-size: 3rem;
-            }
-        }
-    </style>
+    /*================== RESPONSIVE ==================*/
+    @media (max-width: 768px) {
+      .section-content,
+      .services-container,
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
-    <!-- Barra de Navegación -->
-    <nav>
-        <ul>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
+<!-- Navegación -->
+<nav>
+  <ul>
+    <li><a href="#economista">Economista</a></li>
+    <li><a href="#cientifico">Ciencia de Datos</a></li>
+    <li><a href="#financiero">Finanzas</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Jorge Sarcos</h1>
-        <p>Economista | Estadístico | Científico de Datos</p>
-        <a href="#contact" class="btn">Contáctame</a>
-    </header>
+<!-- Encabezado -->
+<header>
+  <h1>Tu Nombre</h1>
+  <p>Economista | Científico de Datos | Especialista Financiero</p>
+  <a href="#contacto" class="btn">Contáctame</a>
+</header>
 
-    <!-- Sección Sobre mí -->
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y ciencia de datos. Estoy enfocado en soluciones empresariales y desarrollo económico. Mi pasión es ayudar a empresas y organizaciones a tomar decisiones informadas basadas en datos.</p>
-        <p>También escribo sobre análisis económicos del desarrollo en mi blog. Puedes leer mis artículos <a href="https://jorgesarcosgon.mystrikingly.com/" target="_blank">aquí</a>.</p>
-    </section>
+<!-- Sección: Economista -->
+<section id="economista">
+  <h2>Economista</h2>
+  <p>Breve introducción sobre tu experiencia como economista, áreas de especialización, tipo de proyectos en los que has trabajado, logros, etc.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Experiencia Laboral</h3>
+      <p>Ejemplo: He colaborado con organismos internacionales y entidades gubernamentales para el diseño de políticas económicas que mejoran la competitividad de mercados locales.</p>
+    </div>
+    <div class="section-box">
+      <h3>Logros Destacados</h3>
+      <p>Ejemplo: Implementé un modelo de evaluación de riesgos macroeconómicos que permitió la optimización de recursos en un 20%.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Sección Habilidades -->
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <i class="fas fa-chart-line"></i>
-                <h3>Econometría</h3>
-                <p>Modelos econométricos avanzados para análisis económico y predicciones precisas.</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-database"></i>
-                <h3>Ciencia de Datos</h3>
-                <p>Experiencia en minería de datos, limpieza de datos y análisis exploratorio.</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-chart-bar"></i>
-                <h3>Optimización de Portafolios</h3>
-                <p>Aplicación de técnicas de optimización y Machine Learning para estrategias de inversión.</p>
-            </div>
-            <!-- Puedes añadir más habilidades si lo deseas -->
-        </div>
-    </section>
+<!-- Sección: Científico de Datos -->
+<section id="cientifico">
+  <h2>Científico de Datos</h2>
+  <p>Aquí hablas de tus habilidades en análisis de datos, machine learning, big data, etc. Menciona las herramientas que dominas (Python, R, SQL...) y la relevancia de tus análisis.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Proyectos de Machine Learning</h3>
+      <p>Ejemplo: Modelos predictivos de series temporales para estimar tendencias de consumo en el sector retail.</p>
+    </div>
+    <div class="section-box">
+      <h3>Análisis Estadístico Avanzado</h3>
+      <p>Ejemplo: Implementación de panel data y técnicas de econometría para la predicción y evaluación de políticas sociales.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Sección Proyectos -->
-    <section id="projects">
-        <h2>Proyectos</h2>
-        <div class="project-gallery">
-            <div class="project-card">
-                <h3>Modelado Macroeconómico Avanzado</h3>
-                <p>Análisis avanzado de series temporales económicas utilizando técnicas de modelado macroeconométrico.</p>
-                <a href="#proyecto1">Ver Detalles</a>
-            </div>
-            <div class="project-card">
-                <h3>Análisis Financiero de Índices Latinoamericanos</h3>
-                <p>Análisis de series temporales y optimización de portafolios en mercados bursátiles de América Latina.</p>
-                <a href="#proyecto2">Ver Detalles</a>
-            </div>
-            <!-- Añade más proyectos según necesites -->
-        </div>
-    </section>
+<!-- Sección: Financiero -->
+<section id="financiero">
+  <h2>Finanzas</h2>
+  <p>Explica tu experiencia en el sector financiero: mercados bursátiles, trading, modelado de portafolios, etc.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Optimización de Portafolios</h3>
+      <p>Ejemplo: Uso de modelos de optimización moderna como Markowitz, CAPM, y técnicas de machine learning para equilibrar riesgos y retornos.</p>
+    </div>
+    <div class="section-box">
+      <h3>Análisis de Mercados Emergentes</h3>
+      <p>Ejemplo: Investigaciones enfocadas en índices latinoamericanos, correlaciones con variables macro y estrategias de inversión.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Sección de Detalles de Proyectos -->
-    <section id="project-details">
-        <!-- Proyecto 1 Detalles -->
-        <div id="proyecto1">
-            <h2>Modelado Macroeconómico Avanzado</h2>
-            <p>En este análisis macroeconométrico, exploré en profundidad series temporales económicas clave utilizando herramientas avanzadas de modelado. Algunos puntos destacados:</p>
-            <ul style="list-style-type: none; padding: 0;">
-                <li>🔍 <strong>Resultados Clave:</strong></li>
-                <li>Tendencias crecientes con fluctuaciones estacionales significativas en series como el PIB, ahorro e inversión privados.</li>
-                <li>Identificación de ciclos económicos bien definidos, indicando períodos alternados de crecimiento y desaceleración.</li>
-                <li>Uso del Filtro de Hodrick-Prescott para distinguir tendencias a largo plazo de fluctuaciones cíclicas.</li>
-                <li>El modelo de regresión lineal múltiple mostró la influencia significativa de la inversión pública y los índices de precios en la inversión privada.</li>
-            </ul>
-            <p>💡 <strong>Conclusión:</strong> Este análisis refuerza la importancia de la estabilidad macroeconómica y las políticas públicas para un crecimiento económico sostenible. Con estas herramientas, es posible mejorar la previsión económica y la formulación de políticas informadas.</p>
-            <a href="pdfs/modelado-macroeconomico.pdf" target="_blank">Descargar PDF del Proyecto</a><br>
-            <a href="#projects">Volver a Proyectos</a>
-        </div>
+<!-- Sección: Servicios -->
+<section id="servicios">
+  <h2>Servicios</h2>
+  <p>Describe brevemente los servicios que ofreces para empresas o clientes.</p>
+  <div class="services-container">
+    <div class="service-item">
+      <h3>Consultoría Económica</h3>
+      <p>Asesoría integral en macroeconomía y políticas económicas para instituciones públicas y privadas.</p>
+    </div>
+    <div class="service-item">
+      <h3>Análisis de Datos</h3>
+      <p>Desarrollo de modelos predictivos, minería de datos y visualizaciones avanzadas para la toma de decisiones.</p>
+    </div>
+    <div class="service-item">
+      <h3>Gestión Financiera</h3>
+      <p>Diseño de estrategias de inversión, evaluación de riesgos y optimización de portafolios.</p>
+    </div>
+    <!-- Agrega más servicios si lo necesitas -->
+  </div>
+</section>
 
-        <!-- Proyecto 2 Detalles -->
-        <div id="proyecto2">
-            <h2>Análisis Financiero de Índices Latinoamericanos</h2>
-            <p>En este proyecto, apliqué técnicas avanzadas de análisis de series temporales y optimización de portafolios para explorar la dinámica de los mercados bursátiles en América Latina, enfocándome en los índices IPC de México (MXX), IBOVESPA de Brasil (BVSP) y MERV de Argentina.</p>
-            <ul style="list-style-type: none; padding: 0;">
-                <li>🔍 <strong>Aspectos Destacados:</strong></li>
-                <li><strong>Comparación de Retornos:</strong> Identificación de factores macroeconómicos que han influido en los rendimientos de los índices.</li>
-                <li><strong>Influencia de la Inflación:</strong> Evaluación de cómo la alta inflación en Argentina ha afectado los retornos del MERV.</li>
-                <li><strong>Optimización de Portafolios:</strong> Implementación de modelos predictivos como Random Forest y SVM para mejorar las estrategias de inversión.</li>
-            </ul>
-            <p>💻 <strong>Código Disponible:</strong> El código utilizado en este análisis está disponible para que puedas copiarlo y adaptarlo a tus propios proyectos.</p>
-            <p>💼 <strong>Aplicaciones Prácticas:</strong> Los resultados ofrecen valiosas perspectivas para gestores de fondos, inversionistas y profesionales en gestión de activos, permitiendo la creación de estrategias de inversión más robustas y adaptadas a las condiciones del mercado.</p>
-            <a href="pdfs/analisis-indices-latinoamericanos.pdf" target="_blank">Descargar PDF del Proyecto</a><br>
-            <a href="#projects">Volver a Proyectos</a>
-        </div>
+<!-- Sección: Proyectos -->
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <p>Breve introducción sobre los tipos de proyectos que has realizado. Cada “Project Card” puede enlazar a más detalles o a un repositorio en GitHub.</p>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Modelado Macroeconómico</h3>
+      <p>Aplicación de técnicas de econometría avanzada para la predicción de variables macroeconómicas.</p>
+      <a href="#">Ver Detalles</a>
+    </div>
+    <div class="project-card">
+      <h3>Análisis de Índices Latinoamericanos</h3>
+      <p>Análisis de series temporales y optimización de portafolios en mercados bursátiles de LATAM.</p>
+      <a href="#">Ver Detalles</a>
+    </div>
+    <!-- Agrega más proyectos si lo deseas -->
+  </div>
+</section>
 
-        <!-- Añade más proyectos según sea necesario -->
-    </section>
+<!-- Sección: Contacto -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Puedes enviarme un mensaje con tus dudas o para solicitar mis servicios.</p>
+  <form>
+    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+    <select name="tema" required>
+      <option value="" disabled selected>Motivo del Contacto</option>
+      <option value="economia">Asesoría Económica</option>
+      <option value="datos">Proyecto de Datos</option>
+      <option value="finanzas">Servicios Financieros</option>
+      <option value="otros">Otros</option>
+    </select>
+    <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+</section>
 
-    <!-- Sección Contacto -->
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form>
-            <input type="text" name="name" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-            <select name="topic" required>
-                <option value="" disabled selected>Selecciona un tema</option>
-                <option value="proyecto">Consulta de Proyecto</option>
-                <option value="colaboracion">Colaboración</option>
-                <option value="otros">Otros</option>
-            </select>
-            <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 Jorge Sarcos. Todos los derechos reservados.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/jorge-sarcos2002" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/jorge_sarcos" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
+<!-- Pie de página -->
+<footer>
+  <p>&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
 
 </body>
 </html>
