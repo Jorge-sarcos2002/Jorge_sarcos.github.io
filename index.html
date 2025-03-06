@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>Jorge Sarcos | Economista & Científico de Datos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuentes de Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Iconos (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /*================== RESET BÁSICO ==================*/
     * {
       margin: 0;
       padding: 0;
@@ -27,6 +30,8 @@
     a:hover {
       color: #063176;
     }
+
+    /*================== NAVEGACIÓN ==================*/
     nav {
       background-color: #0d47a1;
       padding: 1rem;
@@ -50,6 +55,8 @@
       font-weight: 600;
       transition: color 0.3s;
     }
+
+    /*================== ENCABEZADO ==================*/
     header {
       background: linear-gradient(to bottom, #1a73e8, #0d47a1);
       height: 100vh;
@@ -57,7 +64,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: 60px;
+      padding-top: 60px; /* espacio para la barra fija */
       color: #ffffff;
       text-align: center;
     }
@@ -84,6 +91,8 @@
       background-color: #0d47a1;
       color: #ffffff;
     }
+
+    /*================== SECCIONES GENERALES ==================*/
     section {
       padding: 4rem 1rem;
       max-width: 1200px;
@@ -99,19 +108,163 @@
       max-width: 800px;
       margin: 1rem auto;
       text-align: center;
+      line-height: 1.6;
+    }
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .section-box {
+      flex: 1 1 300px;
+      margin: 1rem;
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 5px;
+      text-align: left;
+    }
+    .section-box h3 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    .section-box p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /*================== SERVICIOS ==================*/
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-item {
+      flex: 1 1 250px;
+      margin: 1rem;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+    .service-item h3 {
+      margin-bottom: 1rem;
+    }
+
+    /*================== PROYECTOS ==================*/
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .project-card {
+      flex: 1 1 300px;
+      margin: 1rem;
+      background-color: #fdfdfd;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project-card p {
+      margin-bottom: 0.5rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .project-card a {
+      color: #0d47a1;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /*================== CONTACTO ==================*/
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    form input,
+    form textarea,
+    form select,
+    form button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #0d47a1;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #063176;
+    }
+
+    /*================== FOOTER ==================*/
+    footer {
+      background-color: #0d47a1;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
     }
     .social-icons a {
       color: #ffffff;
       margin: 0 10px;
       font-size: 1.5rem;
+      text-decoration: none;
     }
     .social-icons a:hover {
       color: #cccccc;
+    }
+
+    /*================== RESPONSIVE ==================*/
+    @media (max-width: 768px) {
+      .section-content,
+      .services-container,
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      header h1 {
+        font-size: 2.5rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
+<!-- Navegación -->
 <nav>
   <ul>
     <li><a href="#economista">Economista</a></li>
@@ -123,23 +276,119 @@
   </ul>
 </nav>
 
+<!-- Encabezado -->
 <header>
   <h1>Jorge Sarcos</h1>
   <p>Economista | Científico de Datos | Especialista Financiero</p>
   <a href="#contacto" class="btn">Contáctame</a>
 </header>
 
+<!-- Sección: Economista -->
+<section id="economista">
+  <h2>Economista</h2>
+  <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y soluciones enfocadas en desarrollo económico. He colaborado con diversos organismos y entidades para el diseño de políticas y la optimización de recursos.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Experiencia Laboral</h3>
+      <p>He implementado modelos econométricos avanzados para el análisis de series temporales, identificando tendencias y ciclos macroeconómicos clave para la toma de decisiones en el sector público y privado.</p>
+    </div>
+    <div class="section-box">
+      <h3>Logros Destacados</h3>
+      <p>Desarrollé metodologías de evaluación de riesgos macroeconómicos que han permitido reducir la incertidumbre en proyectos de inversión, generando un ahorro sustancial para las organizaciones con las que he trabajado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Científico de Datos -->
+<section id="cientifico">
+  <h2>Ciencia de Datos</h2>
+  <p>Tengo experiencia en la extracción, limpieza y análisis de grandes volúmenes de datos, aplicando métodos estadísticos y de machine learning para generar valor en entornos empresariales y de investigación.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Proyectos de Machine Learning</h3>
+      <p>He desarrollado modelos predictivos de series temporales que permiten estimar consumos, ventas o indicadores financieros con mayor precisión, usando herramientas como Python (pandas, scikit-learn) y R.</p>
+    </div>
+    <div class="section-box">
+      <h3>Análisis Estadístico Avanzado</h3>
+      <p>He implementado modelos de panel data, técnicas bayesianas y métodos de validación cruzada para optimizar la calidad de las previsiones y apoyar la toma de decisiones basada en datos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Financiero -->
+<section id="financiero">
+  <h2>Finanzas</h2>
+  <p>En el ámbito financiero, me especializo en la evaluación de mercados emergentes, optimización de portafolios e implementación de estrategias de inversión respaldadas por análisis cuantitativo.</p>
+  <div class="section-content">
+    <div class="section-box">
+      <h3>Optimización de Portafolios</h3>
+      <p>Aplico métodos modernos de optimización, como Markowitz y CAPM, complementados con machine learning para equilibrar riesgos y retornos de inversión en contextos volátiles.</p>
+    </div>
+    <div class="section-box">
+      <h3>Análisis de Mercados Emergentes</h3>
+      <p>He investigado índices bursátiles de América Latina, examinando su correlación con variables macro y diseñando estrategias de inversión adaptadas a contextos de alta inflación o volatilidad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Servicios -->
+<section id="servicios">
+  <h2>Servicios</h2>
+  <p>Ofrezco consultorías y asesorías enfocadas en la intersección de la economía, ciencia de datos y finanzas, personalizadas según las necesidades de cada cliente.</p>
+  <div class="services-container">
+    <div class="service-item">
+      <h3>Consultoría Económica</h3>
+      <p>Asesoría integral en macroeconomía, políticas económicas y desarrollo, apoyada en análisis econométrico y marcos teóricos actuales.</p>
+    </div>
+    <div class="service-item">
+      <h3>Análisis de Datos</h3>
+      <p>Diseño e implementación de modelos predictivos, minería de datos y visualizaciones avanzadas para la toma de decisiones estratégicas.</p>
+    </div>
+    <div class="service-item">
+      <h3>Gestión Financiera</h3>
+      <p>Optimización de portafolios, evaluación de riesgos y desarrollo de estrategias de inversión en mercados nacionales e internacionales.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Proyectos -->
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <p>Aquí algunos ejemplos de trabajos recientes o relevantes que he realizado:</p>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Modelado Macroeconómico Avanzado</h3>
+      <p>Análisis profundo de series temporales económicas, identificando tendencias y factores clave de crecimiento.</p>
+      <a href="#">Ver Detalles</a>
+    </div>
+    <div class="project-card">
+      <h3>Análisis de Índices Latinoamericanos</h3>
+      <p>Evaluación de retornos y volatilidad de índices bursátiles en la región, con aplicación de técnicas de optimización.</p>
+      <a href="#">Ver Detalles</a>
+    </div>
+  </div>
+</section>
+
+<!-- Sección: Contacto -->
 <section id="contacto">
   <h2>Contacto</h2>
-  <p>Puedes enviarme un mensaje con tus dudas o para solicitar mis servicios.</p>
+  <p>¿Interesado en mis servicios o en colaborar en un proyecto? Envíame tu mensaje y te responderé a la brevedad.</p>
   <form>
     <input type="text" name="nombre" placeholder="Tu Nombre" required>
     <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+    <select name="tema" required>
+      <option value="" disabled selected>Motivo del Contacto</option>
+      <option value="economia">Asesoría Económica</option>
+      <option value="datos">Proyecto de Datos</option>
+      <option value="finanzas">Servicios Financieros</option>
+      <option value="otros">Otros</option>
+    </select>
     <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
     <button type="submit">Enviar Mensaje</button>
   </form>
 </section>
 
+<!-- Pie de página -->
 <footer>
   <p>&copy; 2025 Jorge Sarcos. Todos los derechos reservados.</p>
   <div class="social-icons">
