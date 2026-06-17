@@ -1,406 +1,222 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jorge Sarcos | Economista & Científico de Datos</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fuentes de Google -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jorge Sarcos González | Economist & Applied Data Scientist</title>
+  <meta name="description" content="Quantitative economist focused on applied econometrics, data science, public policy, development economics and business analytics." />
+
+  <meta property="og:title" content="Jorge Sarcos González | Quantitative Economist" />
+  <meta property="og:description" content="Applied econometrics, data science, economic research, public policy and business analytics." />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Iconos (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    /*================== RESET BÁSICO ==================*/
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
-    }
-    body {
-      background-color: #ffffff;
-      color: #333333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: #0d47a1;
-    }
-    a:hover {
-      color: #063176;
-    }
-
-    /*================== NAVEGACIÓN ==================*/
-    nav {
-      background-color: #0d47a1;
-      padding: 1rem;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 999;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: #ffffff;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    /*================== ENCABEZADO ==================*/
-    header {
-      background: linear-gradient(to bottom, #1a73e8, #0d47a1);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding-top: 60px; /* espacio para la barra fija */
-      color: #ffffff;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-    }
-    header .btn {
-      background-color: #ffffff;
-      color: #0d47a1;
-      padding: 10px 30px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: 0.3s;
-    }
-    header .btn:hover {
-      background-color: #0d47a1;
-      color: #ffffff;
-    }
-
-    /*================== SECCIONES GENERALES ==================*/
-    section {
-      padding: 4rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    section h2 {
-      color: #0d47a1;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    section p {
-      max-width: 800px;
-      margin: 1rem auto;
-      text-align: center;
-      line-height: 1.6;
-    }
-    .section-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .section-box {
-      flex: 1 1 300px;
-      margin: 1rem;
-      background-color: #f5f5f5;
-      padding: 1.5rem;
-      border-radius: 5px;
-      text-align: left;
-    }
-    .section-box h3 {
-      color: #333;
-      margin-bottom: 1rem;
-      text-align: center; /* Centramos los títulos de cada box */
-    }
-    .section-box p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /*================== SERVICIOS ==================*/
-    .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .service-item {
-      flex: 1 1 250px;
-      margin: 1rem;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 1.5rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .service-item:hover {
-      transform: scale(1.05);
-    }
-    .service-item h3 {
-      margin-bottom: 1rem;
-      text-align: center; /* Centramos los títulos de cada servicio */
-    }
-
-    /*================== PROYECTOS ==================*/
-    .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .project-card {
-      flex: 1 1 300px;
-      margin: 1rem;
-      background-color: #fdfdfd;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: scale(1.02);
-    }
-    .project-card h3 {
-      margin-bottom: 0.5rem;
-      text-align: center; /* Centramos los títulos de los proyectos */
-    }
-    .project-card p {
-      margin-bottom: 0.5rem;
-      color: #555;
-      line-height: 1.6;
-    }
-    .project-card a {
-      color: #0d47a1;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
-    }
-
-    /*================== CONTACTO ==================*/
-    form {
-      max-width: 600px;
-      margin: 2rem auto;
-      background-color: #ffffff;
-      padding: 2rem;
-      border-radius: 5px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
-    form input,
-    form textarea,
-    form select,
-    form button {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-    form button {
-      background-color: #0d47a1;
-      color: #ffffff;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    form button:hover {
-      background-color: #063176;
-    }
-
-    /*================== FOOTER ==================*/
-    footer {
-      background-color: #0d47a1;
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem 0;
-    }
-    footer p {
-      margin-bottom: 0.5rem;
-    }
-    .social-icons a {
-      color: #ffffff;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
-    .social-icons a:hover {
-      color: #cccccc;
-    }
-
-    /*================== RESPONSIVE ==================*/
-    @media (max-width: 768px) {
-      .section-content,
-      .services-container,
-      .projects-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 10px 0;
-      }
-      header h1 {
-        font-size: 2.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <div class="page-bg"></div>
 
-<!-- Navegación -->
-<nav>
-  <ul>
-    <li><a href="#economista">Economista</a></li>
-    <li><a href="#cientifico">Ciencia de Datos</a></li>
-    <li><a href="#financiero">Finanzas</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
+  <header class="navbar" id="navbar">
+    <a href="#home" class="brand">JSG</a>
 
-<!-- Encabezado -->
-<header>
-  <h1>Jorge Sarcos</h1>
-  <p>Economista | Científico de Datos | Especialista Financiero</p>
-  <a href="#contacto" class="btn">Contáctame</a>
-</header>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<!-- Sección: Economista -->
-<section id="economista">
-  <h2>Economista</h2>
-  <p>Mi nombre es Jorge Sarcos, soy economista con experiencia en análisis de datos, econometría y soluciones enfocadas en desarrollo económico. He colaborado con diversos organismos y entidades para el diseño de políticas y la optimización de recursos.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Experiencia Laboral</h3>
-      <p>He implementado modelos econométricos avanzados para el análisis de series temporales, identificando tendencias y ciclos macroeconómicos clave para la toma de decisiones en el sector público y privado.</p>
-    </div>
-    <div class="section-box">
-      <h3>Logros Destacados</h3>
-      <p>Desarrollé metodologías de evaluación de riesgos macroeconómicos que han permitido reducir la incertidumbre en proyectos de inversión, generando un ahorro sustancial para las organizaciones con las que he trabajado.</p>
-    </div>
-  </div>
-</section>
+    <a class="nav-cta" href="mailto:jorgesarcos95@gmail.com">Let’s connect</a>
+  </header>
 
-<!-- Sección: Científico de Datos -->
-<section id="cientifico">
-  <h2>Ciencia de Datos</h2>
-  <p>Tengo experiencia en la extracción, limpieza y análisis de grandes volúmenes de datos, aplicando métodos estadísticos y de machine learning para generar valor en entornos empresariales y de investigación.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Proyectos de Machine Learning</h3>
-      <p>He desarrollado modelos predictivos de series temporales que permiten estimar consumos, ventas o indicadores financieros con mayor precisión, usando herramientas como Python (pandas, scikit-learn) y R.</p>
-    </div>
-    <div class="section-box">
-      <h3>Análisis Estadístico Avanzado</h3>
-      <p>He implementado modelos de panel data, técnicas bayesianas y métodos de validación cruzada para optimizar la calidad de las previsiones y apoyar la toma de decisiones basada en datos.</p>
-    </div>
-  </div>
-</section>
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Quantitative Economist · Applied Data Science</p>
 
-<!-- Sección: Financiero -->
-<section id="financiero">
-  <h2>Finanzas</h2>
-  <p>En el ámbito financiero, me especializo en la evaluación de mercados emergentes, optimización de portafolios e implementación de estrategias de inversión respaldadas por análisis cuantitativo.</p>
-  <div class="section-content">
-    <div class="section-box">
-      <h3>Optimización de Portafolios</h3>
-      <p>Aplico métodos modernos de optimización, como Markowitz y CAPM, complementados con machine learning para equilibrar riesgos y retornos de inversión en contextos volátiles.</p>
-    </div>
-    <div class="section-box">
-      <h3>Análisis de Mercados Emergentes</h3>
-      <p>He investigado índices bursátiles de América Latina, examinando su correlación con variables macro y diseñando estrategias de inversión adaptadas a contextos de alta inflación o volatilidad.</p>
-    </div>
-  </div>
-</section>
+        <h1>
+          Jorge Sarcos González
+          <span>Economist | Applied Econometrics | Data Science</span>
+        </h1>
 
-<!-- Sección: Servicios -->
-<section id="servicios">
-  <h2>Servicios</h2>
-  <p>Ofrezco consultorías y asesorías enfocadas en la intersección de la economía, ciencia de datos y finanzas, personalizadas según las necesidades de cada cliente.</p>
-  <div class="services-container">
-    <div class="service-item">
-      <h3>Consultoría Económica</h3>
-      <p>Asesoría integral en macroeconomía, políticas económicas y desarrollo, apoyada en análisis econométrico y marcos teóricos actuales.</p>
-    </div>
-    <div class="service-item">
-      <h3>Análisis de Datos</h3>
-      <p>Diseño e implementación de modelos predictivos, minería de datos y visualizaciones avanzadas para la toma de decisiones estratégicas.</p>
-    </div>
-    <div class="service-item">
-      <h3>Gestión Financiera</h3>
-      <p>Optimización de portafolios, evaluación de riesgos y desarrollo de estrategias de inversión en mercados nacionales e internacionales.</p>
-    </div>
-  </div>
-</section>
+        <p class="hero-description">
+          I transform economic, social and business data into rigorous evidence,
+          policy insights and decision-making tools.
+        </p>
 
-<!-- Sección: Proyectos -->
-<section id="proyectos">
-  <h2>Proyectos Destacados</h2>
-  <p>Aquí algunos ejemplos de trabajos recientes o relevantes que he realizado:</p>
-  <div class="projects-container">
-    <div class="project-card">
-      <h3>Modelado Macroeconómico Avanzado</h3>
-      <p>Análisis profundo de series temporales económicas, identificando tendencias y factores clave de crecimiento.</p>
-      <a href="#">Ver Detalles</a>
-    </div>
-    <div class="project-card">
-      <h3>Análisis de Índices Latinoamericanos</h3>
-      <p>Evaluación de retornos y volatilidad de índices bursátiles en la región, con aplicación de técnicas de optimización.</p>
-      <a href="#">Ver Detalles</a>
-    </div>
-  </div>
-</section>
+        <div class="hero-actions">
+          <a href="#research" class="btn primary">View research</a>
+          <a href="#projects" class="btn secondary">View projects</a>
+          <a href="https://github.com/Jorge-sarcos2002" target="_blank" class="btn ghost">GitHub</a>
+        </div>
 
-<!-- Sección: Contacto -->
-<section id="contacto">
-  <h2>Contacto</h2>
-  <p>¿Interesado en mis servicios o en colaborar en un proyecto? Envíame tu mensaje y te responderé a la brevedad.</p>
-  <form>
-    <input type="text" name="nombre" placeholder="Tu Nombre" required>
-    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-    <select name="tema" required>
-      <option value="" disabled selected>Motivo del Contacto</option>
-      <option value="economia">Asesoría Económica</option>
-      <option value="datos">Proyecto de Datos</option>
-      <option value="finanzas">Servicios Financieros</option>
-      <option value="otros">Otros</option>
-    </select>
-    <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
-    <button type="submit">Enviar Mensaje</button>
-  </form>
-</section>
+        <div class="hero-stats">
+          <div>
+            <strong>Econometrics</strong>
+            <span>Logit · PCA · Clustering · Panel</span>
+          </div>
+          <div>
+            <strong>Data Science</strong>
+            <span>Python · R · SQL · BI</span>
+          </div>
+          <div>
+            <strong>Policy & Research</strong>
+            <span>Labour · Poverty · Development</span>
+          </div>
+        </div>
+      </div>
 
-<!-- Pie de página -->
-<footer>
-  <p>&copy; 2025 Jorge Sarcos. Todos los derechos reservados.</p>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/jorge-sarcos2002" target="_blank"><i class="fab fa-github\"></i></a>
-    <a href="https://twitter.com/jorge_sarcos" target="_blank"><i class="fab fa-twitter\"></i></a>
-  </div>
-</footer>
+      <div class="hero-card reveal">
+        <div class="terminal">
+          <div class="terminal-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>profile = {
+  "name": "Jorge Sarcos González",
+  "field": "Economics + Data Science",
+  "focus": [
+    "Applied Econometrics",
+    "Public Policy",
+    "Business Analytics",
+    "Development Economics"
+  ],
+  "tools": ["Python", "R", "Stata", "SQL", "Power BI"]
+}</code></pre>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="about">
+      <div class="section-header reveal">
+        <p class="eyebrow">About</p>
+        <h2>Economics, evidence and quantitative strategy.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I am an Ecuadorian economist with a quantitative profile focused on
+            <strong>applied econometrics, statistical modeling, data science,
+            economic research and business analytics</strong>.
+          </p>
+
+          <p>
+            My work connects economic theory, empirical methods and data-driven
+            decision-making. I am particularly interested in labour markets,
+            poverty, inequality, education, development economics, public policy,
+            financial risk, forecasting and business intelligence.
+          </p>
+
+          <p>
+            I use Python, R, Stata, SQL, Power BI and Excel to clean data, build
+            models, evaluate results and communicate findings clearly.
+          </p>
+        </div>
+
+        <div class="about-panel reveal">
+          <h3>Core positioning</h3>
+          <ul>
+            <li>Applied econometrics for economic and social questions</li>
+            <li>Statistical modeling for public policy and business problems</li>
+            <li>Dashboards and reports for decision-making</li>
+            <li>Academic research with international projection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="section-header reveal">
+        <p class="eyebrow">Expertise</p>
+        <h2>Quantitative profile</h2>
+      </div>
+
+      <div class="expertise-grid">
+        <article class="glass-card reveal">
+          <h3>Applied Econometrics</h3>
+          <p>Logit/probit models, marginal effects, panel data and policy-oriented empirical analysis.</p>
+        </article>
+
+        <article class="glass-card reveal">
+          <h3>Data Science & Statistics</h3>
+          <p>EDA, PCA, clustering, classification metrics, predictive modeling and validation.</p>
+        </article>
+
+        <article class="glass-card reveal">
+          <h3>Business Analytics & BI</h3>
+          <p>Power BI dashboards, SQL analysis, KPI design, executive reporting and data storytelling.</p>
+        </article>
+
+        <article class="glass-card reveal">
+          <h3>Research & Policy</h3>
+          <p>Labour markets, poverty, inequality, education, gender economics and public policy.</p>
+        </article>
+      </div>
+
+      <div class="toolkit reveal" id="toolkit"></div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-header reveal">
+        <p class="eyebrow">Research archive</p>
+        <h2>Papers, working papers and applied research</h2>
+        <p>
+          A curated archive of research outputs, technical reports and applied papers.
+          Items can link to GitHub repositories, PDFs, reports or Google Drive files.
+        </p>
+      </div>
+
+      <div class="research-grid" id="researchGrid"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-header reveal">
+        <p class="eyebrow">Selected projects</p>
+        <h2>Applied economics, analytics and data science</h2>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section class="section" id="interests">
+      <div class="section-header reveal">
+        <p class="eyebrow">Research interests</p>
+        <h2>Topics I work on</h2>
+      </div>
+
+      <div class="chips reveal" id="interestChips"></div>
+    </section>
+
+    <section class="section collaboration">
+      <div class="collaboration-card reveal">
+        <p class="eyebrow">Collaboration</p>
+        <h2>Available for research, consulting and data projects.</h2>
+        <p>
+          Econometric analysis, statistical modeling, dashboards, forecasting,
+          policy analysis, technical reports and business intelligence.
+        </p>
+
+        <div class="hero-actions">
+          <a href="mailto:jorgesarcos95@gmail.com" class="btn primary">Email me</a>
+          <a href="https://www.linkedin.com/in/jorge-sarcosgon/" target="_blank" class="btn secondary">LinkedIn</a>
+          <a href="https://github.com/Jorge-sarcos2002" target="_blank" class="btn ghost">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <p>Jorge Sarcos González · Economics · Econometrics · Data Science · Public Policy · Business Analytics</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
